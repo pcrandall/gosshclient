@@ -1,0 +1,20 @@
+host:
+- name: NAME
+  connection: IP:PORT
+  username: USERNAME
+  password: PASSWORD
+  commands:
+    - name: Name of command 
+      string: command string 
+      userinput: false
+      whitespace: false
+
+    - name: List files 
+      string: ls -alh 
+      userinput: false
+      whitespace: false
+
+    - name: Search Logs 
+      string: cd /var/log; find . -name * -print0 | xargs -0 grep   
+      userinput: true # set to true for propmt to append user input to the command string
+      whitespace: true # Used to insert white before the end of command string
