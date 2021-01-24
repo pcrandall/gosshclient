@@ -10,17 +10,16 @@ If **no** config file is present the binary will look for embedded config.
 ## Usage
 
 ```
-Configure ./config/config.yml for your remote hosts
+1. Configure ./config/config.yml for your remote hosts
 
-Installs go-bindata if not already installed
+2. Installs go-bindata if not already installed
   make install
 
-To run
+3. Run
   make run
 
-To build
+4. Build
   make build
-
 ```
 
 ## Config file format

@@ -37,9 +37,6 @@ func init() {
 
 func printHeader(hostname string) {
 	callClear()
-	padding := ""
-	signature := "pcrandall '21"
-	paddingLen := 0
 
 	if hostname == "" {
 		hostname = "SSH CLIENT"
@@ -89,14 +86,6 @@ func printHeader(hostname string) {
 		longestRow = (longestRow / 2) + 4
 	}
 
-	// TODO fix the padding calc
-	// paddingLen = len(renderStr)/(11*2) - len(signature)
-	paddingLen = longestRow - len(signature)
-	for i := 0; i <= paddingLen; i++ {
-		padding += " "
-	}
 	// remove the last three blank rows, all uppercase chars have a height of 8, the font height for default font is 11
 	fmt.Println(renderStr[:len(renderStr)-len(renderStr)/11*3-1])
-	// print the signature
-	fmt.Printf("%s%s\n", padding, signature)
 }
